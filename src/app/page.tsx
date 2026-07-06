@@ -105,19 +105,19 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-cream text-charcoal">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-charcoal/5 bg-cream/82 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-          <a href="#inicio" className="flex min-w-0 items-center gap-3" aria-label="Low Tide Chapadmalal inicio">
-            <span className="relative flex h-9 w-24 shrink-0 items-center justify-center overflow-hidden rounded-full border border-charcoal/10 bg-white/45 px-3 shadow-[0_10px_24px_rgba(45,41,35,0.06)]">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-2.5 sm:px-8">
+          <a href="#inicio" className="flex min-w-0 items-center gap-2.5" aria-label="Low Tide Chapadmalal inicio">
+            <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-charcoal/10 bg-white/70 shadow-[0_10px_24px_rgba(45,41,35,0.06)]">
               <Image
                 src="/images/low-tide/logo.jpg"
-                alt="Low Tide Chapadmalal"
-                width={124}
-                height={52}
-                className="h-full w-full object-contain"
+                alt=""
+                width={1024}
+                height={1536}
+                className="absolute left-1/2 top-[46%] h-[3.75rem] w-10 -translate-x-1/2 -translate-y-1/2 object-contain"
                 priority
               />
             </span>
-            <span className="hidden font-serif text-lg tracking-tight text-charcoal/90 sm:inline">Low Tide</span>
+            <span className="font-serif text-xl tracking-[-0.03em] text-charcoal sm:text-[1.35rem]">Low Tide</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm text-charcoal/68 md:flex">
             {navItems.map((item) => (
