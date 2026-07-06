@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-const airbnbHref = "#";
+const airbnbHref =
+  "https://www.airbnb.com.ar/rooms/1720756771533061117?unique_share_id=1eb7cf14-6a77-4d79-b93a-493d29b4adda&viralityEntryPoint=1&s=76";
 
 const navItems = [
   { label: "La casa", href: "#casa" },
@@ -87,10 +88,12 @@ function CtaLink({ children, variant = "dark" }: { children: React.ReactNode; va
   return (
     <a
       href={airbnbHref}
+      target="_blank"
+      rel="noreferrer"
       className={
         variant === "dark"
-          ? "inline-flex items-center justify-center rounded-full bg-charcoal px-6 py-3 text-sm font-semibold text-cream shadow-[0_18px_40px_rgba(45,41,35,0.18)] transition hover:-translate-y-0.5 hover:bg-olive-900"
-          : "inline-flex items-center justify-center rounded-full bg-cream px-6 py-3 text-sm font-semibold text-charcoal shadow-[0_18px_40px_rgba(45,41,35,0.16)] transition hover:-translate-y-0.5 hover:bg-white"
+          ? "inline-flex items-center justify-center rounded-full bg-charcoal px-5 py-2.5 text-sm font-semibold text-cream shadow-[0_14px_30px_rgba(45,41,35,0.16)] transition hover:-translate-y-0.5 hover:bg-olive-900 sm:px-5"
+          : "inline-flex items-center justify-center rounded-full bg-cream px-5 py-2.5 text-sm font-semibold text-charcoal shadow-[0_14px_30px_rgba(45,41,35,0.14)] transition hover:-translate-y-0.5 hover:bg-white sm:px-5"
       }
     >
       {children}
@@ -101,31 +104,33 @@ function CtaLink({ children, variant = "dark" }: { children: React.ReactNode; va
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-cream text-charcoal">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-cream/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-          <a href="#inicio" className="flex items-center gap-3" aria-label="Low Tide Chapadmalal inicio">
-            <Image
-              src="/images/low-tide/logo.jpg"
-              alt="Low Tide Chapadmalal"
-              width={44}
-              height={44}
-              className="rounded-full object-cover ring-1 ring-charcoal/10"
-              priority
-            />
-            <span className="font-serif text-lg tracking-tight">Low Tide</span>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-charcoal/5 bg-cream/82 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
+          <a href="#inicio" className="flex min-w-0 items-center gap-3" aria-label="Low Tide Chapadmalal inicio">
+            <span className="relative flex h-9 w-24 shrink-0 items-center justify-center overflow-hidden rounded-full border border-charcoal/10 bg-white/45 px-3 shadow-[0_10px_24px_rgba(45,41,35,0.06)]">
+              <Image
+                src="/images/low-tide/logo.jpg"
+                alt="Low Tide Chapadmalal"
+                width={124}
+                height={52}
+                className="h-full w-full object-contain"
+                priority
+              />
+            </span>
+            <span className="hidden font-serif text-lg tracking-tight text-charcoal/90 sm:inline">Low Tide</span>
           </a>
-          <nav className="hidden items-center gap-8 text-sm text-charcoal/70 md:flex">
+          <nav className="hidden items-center gap-7 text-sm text-charcoal/68 md:flex">
             {navItems.map((item) => (
               <a key={item.href} href={item.href} className="transition hover:text-charcoal">
                 {item.label}
               </a>
             ))}
           </nav>
-          <CtaLink>Ver disponibilidad en Airbnb</CtaLink>
+          <CtaLink>Ver en Airbnb</CtaLink>
         </div>
       </header>
 
-      <section id="inicio" className="relative flex min-h-screen items-end px-4 pb-6 pt-28 sm:px-6 lg:px-8">
+      <section id="inicio" className="relative flex min-h-screen items-end px-4 pb-4 pt-24 sm:px-6 sm:pb-6 lg:px-8">
         <div className="absolute inset-0">
           <Image
             src="/images/low-tide/frente-costado.jpg"
@@ -133,24 +138,24 @@ export default function Home() {
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-[54%_50%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/30 to-cream/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/78 via-charcoal/22 to-cream/10" />
         </div>
-        <div className="relative mx-auto grid w-full max-w-7xl gap-8 rounded-[2rem] border border-white/20 bg-cream/90 p-6 shadow-2xl backdrop-blur md:grid-cols-[1.15fr_0.85fr] md:p-10 lg:p-12">
+        <div className="relative mx-auto grid w-full max-w-7xl gap-7 rounded-[1.75rem] border border-white/35 bg-cream/82 p-6 shadow-[0_28px_80px_rgba(45,41,35,0.24)] backdrop-blur-md md:grid-cols-[1.2fr_0.8fr] md:p-8 lg:p-9">
           <div>
             <SectionEyebrow>Casa boutique en la costa</SectionEyebrow>
             <h1 className="max-w-4xl font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-charcoal sm:text-6xl lg:text-7xl">
               Casa de diseño cerca del mar para bajar un cambio.
             </h1>
           </div>
-          <div className="flex flex-col justify-end gap-8">
-            <p className="text-lg leading-8 text-charcoal/72">
+          <div className="flex flex-col justify-end gap-6">
+            <p className="text-base leading-7 text-charcoal/72 sm:text-lg sm:leading-8">
               Un refugio moderno en Chapadmalal, pensado para descansar, compartir y vivir la costa con comodidad: luz natural, madera, deck, parrilla y el ritmo tranquilo del mar.
             </p>
             <div className="grid grid-cols-2 gap-3">
               {facts.map((fact) => (
-                <div key={fact} className="rounded-2xl border border-charcoal/10 bg-white/55 px-4 py-3 text-sm font-medium text-charcoal/80">
+                <div key={fact} className="rounded-2xl border border-charcoal/10 bg-white/50 px-4 py-2.5 text-sm font-medium text-charcoal/80">
                   {fact}
                 </div>
               ))}
@@ -159,7 +164,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="casa" className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:py-32">
+      <section id="casa" className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:py-28">
         <div>
           <SectionEyebrow>La pausa justa</SectionEyebrow>
           <h2 className="font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
@@ -176,8 +181,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 pb-24 sm:px-8">
-        <div className="grid gap-4 md:grid-cols-4">
+      <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:pb-28">
+        <div className="grid gap-5 md:grid-cols-4">
           {details.map((detail) => (
             <article key={detail.title} className="rounded-[1.75rem] border border-charcoal/10 bg-sand/50 p-6 transition hover:-translate-y-1 hover:bg-sand/70">
               <h3 className="mb-4 font-serif text-2xl tracking-[-0.03em]">{detail.title}</h3>
@@ -187,15 +192,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="espacios" className="bg-white/45 px-5 py-24 sm:px-8 lg:py-32">
+      <section id="espacios" className="bg-white/45 px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 max-w-2xl">
+          <div className="mb-14 max-w-2xl">
             <SectionEyebrow>Adentro</SectionEyebrow>
             <h2 className="font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
               Ambientes cálidos para quedarse un rato más.
             </h2>
           </div>
-          <div className="grid auto-rows-[280px] gap-4 md:grid-cols-12">
+          <div className="grid auto-rows-[280px] gap-5 md:grid-cols-12">
             {galleryImages.map((image) => (
               <figure key={image.src} className={`group relative overflow-hidden rounded-[2rem] bg-sand ${image.className}`}>
                 <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" />
@@ -208,7 +213,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:py-32">
+      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:py-28">
         <div className="relative min-h-[520px] overflow-hidden rounded-[2.5rem]">
           <Image src="/images/low-tide/deck.jpg" alt="Deck privado de Low Tide Chapadmalal" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
         </div>
@@ -228,7 +233,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="chapadmalal" className="relative px-5 py-24 sm:px-8 lg:py-32">
+      <section id="chapadmalal" className="relative px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl overflow-hidden rounded-[2.5rem] bg-charcoal text-cream lg:grid-cols-[0.9fr_1.1fr]">
           <div className="p-8 sm:p-12 lg:p-16">
             <SectionEyebrow>Chapadmalal</SectionEyebrow>
@@ -245,7 +250,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 pb-24 sm:px-8 lg:pb-32">
+      <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:pb-28">
         <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <SectionEyebrow>Comodidades</SectionEyebrow>
