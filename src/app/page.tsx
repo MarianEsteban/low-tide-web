@@ -3,6 +3,8 @@ import Image from "next/image";
 const airbnbHref =
   "https://www.airbnb.com.ar/rooms/1720756771533061117?unique_share_id=1eb7cf14-6a77-4d79-b93a-493d29b4adda&viralityEntryPoint=1&s=76";
 
+const instagramHref = "https://www.instagram.com/lowtide.chapa/";
+
 const navItems = [
   { label: "La casa", href: "#casa" },
   { label: "Espacios", href: "#espacios" },
@@ -125,6 +127,14 @@ export default function Home() {
                 {item.label}
               </a>
             ))}
+            <a
+              href={instagramHref}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-charcoal"
+            >
+              Instagram
+            </a>
           </nav>
           <CtaLink>Ver en Airbnb</CtaLink>
         </div>
@@ -281,12 +291,34 @@ export default function Home() {
           <div className="mt-8 sm:mt-10">
             <CtaLink>Consultá disponibilidad en Airbnb</CtaLink>
           </div>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-charcoal/55 sm:mt-5">
+            También podés{" "}
+            <a
+              href={instagramHref}
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-charcoal/70 underline decoration-charcoal/20 underline-offset-4 transition hover:text-charcoal"
+            >
+              seguirnos en Instagram
+            </a>{" "}
+            para ver más de Low Tide y Chapadmalal.
+          </p>
         </div>
       </section>
 
       <footer className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-10 text-sm text-charcoal/60 sm:px-8 md:flex-row md:items-center md:justify-between">
         <p>© 2026 Low Tide Chapadmalal</p>
-        <p>Casa de diseño cerca del mar · Chapadmalal, Buenos Aires</p>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+          <p>Casa de diseño cerca del mar · Chapadmalal, Buenos Aires</p>
+          <a
+            href={instagramHref}
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-charcoal/65 transition hover:text-charcoal"
+          >
+            Instagram
+          </a>
+        </div>
       </footer>
     </main>
   );
