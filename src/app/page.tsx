@@ -107,17 +107,17 @@ export default function Home() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-charcoal/5 bg-cream/82 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-2.5 sm:px-8">
           <a href="#inicio" className="flex min-w-0 items-center gap-2.5" aria-label="Low Tide Chapadmalal inicio">
-            <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-charcoal/10 bg-white/70 shadow-[0_10px_24px_rgba(45,41,35,0.06)]">
+            <span className="relative flex h-[2.375rem] w-[2.375rem] shrink-0 items-center justify-center overflow-hidden rounded-xl border border-charcoal/10 bg-white/70 shadow-[0_10px_24px_rgba(45,41,35,0.06)] sm:h-10 sm:w-10">
               <Image
                 src="/images/low-tide/low-tide-icon.svg"
                 alt=""
-                width={36}
-                height={36}
-                className="h-full w-full object-contain p-1.5"
+                width={24}
+                height={24}
+                className="h-6 w-6 object-contain sm:h-[1.625rem] sm:w-[1.625rem]"
                 priority
               />
             </span>
-            <span className="font-serif text-xl tracking-[-0.03em] text-charcoal sm:text-[1.35rem]">Low Tide</span>
+            <span className="font-serif text-[1.32rem] tracking-[-0.03em] text-charcoal sm:text-[1.45rem]">Low Tide</span>
           </a>
           <nav className="hidden items-center gap-7 text-sm text-charcoal/68 md:flex">
             {navItems.map((item) => (
