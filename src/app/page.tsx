@@ -109,11 +109,11 @@ export default function Home() {
           <a href="#inicio" className="flex min-w-0 items-center gap-2.5" aria-label="Low Tide Chapadmalal inicio">
             <span className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-charcoal/10 bg-white/70 shadow-[0_10px_24px_rgba(45,41,35,0.06)]">
               <Image
-                src="/images/low-tide/logo.jpg"
+                src="/images/low-tide/low-tide-icon.svg"
                 alt=""
-                width={1024}
-                height={1536}
-                className="absolute left-1/2 top-[46%] h-[3.75rem] w-10 -translate-x-1/2 -translate-y-1/2 object-contain"
+                width={36}
+                height={36}
+                className="h-full w-full object-contain p-1.5"
                 priority
               />
             </span>
