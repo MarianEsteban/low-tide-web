@@ -142,20 +142,20 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/78 via-charcoal/22 to-cream/10" />
         </div>
-        <div className="relative mx-auto grid w-full max-w-7xl gap-7 rounded-[1.75rem] border border-white/35 bg-cream/82 p-6 shadow-[0_28px_80px_rgba(45,41,35,0.24)] backdrop-blur-md md:grid-cols-[1.2fr_0.8fr] md:p-8 lg:p-9">
+        <div className="relative mx-auto grid w-full max-w-7xl gap-5 rounded-[1.75rem] border border-white/35 bg-cream/82 p-5 shadow-[0_28px_80px_rgba(45,41,35,0.24)] backdrop-blur-md sm:gap-7 sm:p-6 md:grid-cols-[1.2fr_0.8fr] md:p-8 lg:p-9">
           <div>
             <SectionEyebrow>Casa boutique en la costa</SectionEyebrow>
-            <h1 className="max-w-4xl font-serif text-5xl leading-[0.95] tracking-[-0.05em] text-charcoal sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-4xl font-serif text-[2.55rem] leading-[0.98] tracking-[-0.05em] text-charcoal sm:text-6xl sm:leading-[0.95] lg:text-7xl">
               Casa de diseño cerca del mar para bajar un cambio.
             </h1>
           </div>
-          <div className="flex flex-col justify-end gap-6">
-            <p className="text-base leading-7 text-charcoal/72 sm:text-lg sm:leading-8">
+          <div className="flex flex-col justify-end gap-4 sm:gap-6">
+            <p className="text-[0.95rem] leading-6 text-charcoal/72 sm:text-lg sm:leading-8">
               Un refugio moderno en Chapadmalal, pensado para descansar, compartir y vivir la costa con comodidad: luz natural, madera, deck, parrilla y el ritmo tranquilo del mar.
             </p>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               {facts.map((fact) => (
-                <div key={fact} className="rounded-2xl border border-charcoal/10 bg-white/50 px-4 py-2.5 text-sm font-medium text-charcoal/80">
+                <div key={fact} className="rounded-2xl border border-charcoal/10 bg-white/50 px-3 py-2 text-[0.8125rem] font-medium text-charcoal/80 sm:px-4 sm:py-2.5 sm:text-sm">
                   {fact}
                 </div>
               ))}
