@@ -164,14 +164,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="casa" className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:py-28">
+      <section id="casa" className="mx-auto grid max-w-7xl gap-9 px-5 py-16 sm:gap-12 sm:px-8 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:py-28">
         <div>
           <SectionEyebrow>La pausa justa</SectionEyebrow>
-          <h2 className="font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
+          <h2 className="font-serif text-[2rem] leading-tight tracking-[-0.04em] sm:text-5xl">
             Diseño simple, mar cerca y descanso real
           </h2>
         </div>
-        <div className="space-y-6 text-xl leading-9 text-charcoal/70">
+        <div className="space-y-4 text-base leading-7 text-charcoal/70 sm:space-y-6 sm:text-xl sm:leading-9">
           <p>
             Low Tide no intenta competir con el paisaje: lo acompaña. La casa combina materiales nobles, ambientes luminosos y una distribución pensada para que cada plan salga fácil, desde el café de la mañana hasta la parrilla al atardecer.
           </p>
@@ -181,22 +181,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:pb-28">
+      <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:pb-28">
         <div className="grid gap-5 md:grid-cols-4">
           {details.map((detail) => (
-            <article key={detail.title} className="rounded-[1.75rem] border border-charcoal/10 bg-sand/50 p-6 transition hover:-translate-y-1 hover:bg-sand/70">
-              <h3 className="mb-4 font-serif text-2xl tracking-[-0.03em]">{detail.title}</h3>
-              <p className="leading-7 text-charcoal/66">{detail.text}</p>
+            <article key={detail.title} className="rounded-[1.75rem] border border-charcoal/10 bg-sand/50 p-5 transition hover:-translate-y-1 sm:p-6 hover:bg-sand/70">
+              <h3 className="mb-3 font-serif text-[1.35rem] tracking-[-0.03em] sm:mb-4 sm:text-2xl">{detail.title}</h3>
+              <p className="text-[0.95rem] leading-6 text-charcoal/66 sm:text-base sm:leading-7">{detail.text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="espacios" className="bg-white/45 px-5 py-20 sm:px-8 lg:py-28">
+      <section id="espacios" className="bg-white/45 px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14 max-w-2xl">
+          <div className="mb-10 max-w-2xl sm:mb-14">
             <SectionEyebrow>Adentro</SectionEyebrow>
-            <h2 className="font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="font-serif text-[2rem] leading-tight tracking-[-0.04em] sm:text-5xl">
               Ambientes cálidos para quedarse un rato más.
             </h2>
           </div>
@@ -213,56 +213,56 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:py-28">
-        <div className="relative min-h-[520px] overflow-hidden rounded-[2.5rem]">
+      <section className="mx-auto grid max-w-7xl gap-6 px-5 py-16 sm:gap-8 sm:px-8 sm:py-20 lg:grid-cols-2 lg:py-28">
+        <div className="relative min-h-[420px] overflow-hidden rounded-[2.5rem] sm:min-h-[520px]">
           <Image src="/images/low-tide/deck.jpg" alt="Deck privado de Low Tide Chapadmalal" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
         </div>
-        <div className="grid content-between gap-8 rounded-[2.5rem] bg-olive-900 p-8 text-cream sm:p-12">
+        <div className="grid content-between gap-6 rounded-[2.5rem] bg-olive-900 p-6 text-cream sm:gap-8 sm:p-12">
           <div>
             <SectionEyebrow>Exterior</SectionEyebrow>
-            <h2 className="font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="font-serif text-[2rem] leading-tight tracking-[-0.04em] sm:text-5xl">
               Deck, parrilla y tardes sin reloj.
             </h2>
           </div>
-          <div className="relative min-h-[240px] overflow-hidden rounded-[1.75rem]">
+          <div className="relative min-h-[210px] overflow-hidden rounded-[1.75rem] sm:min-h-[240px]">
             <Image src="/images/low-tide/parrilla.jpg" alt="Parrilla exterior para cocinar en Low Tide Chapadmalal" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
-          <p className="text-lg leading-8 text-cream/76">
+          <p className="text-base leading-7 text-cream/76 sm:text-lg sm:leading-8">
             Afuera está gran parte de la experiencia: desayunar al sol, leer después de la playa, cocinar algo simple y estirar la sobremesa cuando baja la luz.
           </p>
         </div>
       </section>
 
-      <section id="chapadmalal" className="relative px-5 py-20 sm:px-8 lg:py-28">
+      <section id="chapadmalal" className="relative px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl overflow-hidden rounded-[2.5rem] bg-charcoal text-cream lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="p-8 sm:p-12 lg:p-16">
+          <div className="p-6 sm:p-12 lg:p-16">
             <SectionEyebrow>Chapadmalal</SectionEyebrow>
-            <h2 className="font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
+            <h2 className="font-serif text-[2rem] leading-tight tracking-[-0.04em] sm:text-5xl">
               Costa abierta, calma de pueblo y mar siempre cerca.
             </h2>
-            <p className="mt-8 text-lg leading-8 text-cream/72">
+            <p className="mt-6 text-base leading-7 text-cream/72 sm:mt-8 sm:text-lg sm:leading-8">
               Chapa tiene esa mezcla difícil de encontrar: playas amplias, caminos de arena, cafés discretos y noches silenciosas. Low Tide es para entrar en esa frecuencia sin resignar comodidad.
             </p>
           </div>
-          <div className="relative min-h-[420px]">
+          <div className="relative min-h-[340px] sm:min-h-[420px]">
             <Image src="/images/low-tide/playa.jpg" alt="Playa de Chapadmalal cerca de Low Tide" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:pb-28">
-        <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+      <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:pb-28">
+        <div className="mb-8 flex flex-col justify-between gap-5 sm:mb-10 sm:gap-6 md:flex-row md:items-end">
           <div>
             <SectionEyebrow>Comodidades</SectionEyebrow>
-            <h2 className="font-serif text-4xl tracking-[-0.04em] sm:text-5xl">Lo esencial, bien resuelto.</h2>
+            <h2 className="font-serif text-[2rem] tracking-[-0.04em] sm:text-5xl">Lo esencial, bien resuelto.</h2>
           </div>
-          <p className="max-w-md leading-7 text-charcoal/64">
+          <p className="max-w-md text-[0.95rem] leading-6 text-charcoal/64 sm:text-base sm:leading-7">
             Detalles pensados para que la estadía fluya con naturalidad, tanto en verano como en escapadas de otoño e invierno.
           </p>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {amenities.map((amenity) => (
-            <div key={amenity} className="rounded-full border border-charcoal/10 bg-white/55 px-5 py-4 text-center text-sm font-semibold text-charcoal/75">
+            <div key={amenity} className="rounded-full border border-charcoal/10 bg-white/55 px-5 py-3 text-center text-sm sm:py-4 font-semibold text-charcoal/75">
               {amenity}
             </div>
           ))}
@@ -270,15 +270,15 @@ export default function Home() {
       </section>
 
       <section className="px-5 pb-8 sm:px-8">
-        <div className="mx-auto overflow-hidden rounded-[2.5rem] bg-sand p-8 text-center sm:p-12 lg:p-20">
+        <div className="mx-auto overflow-hidden rounded-[2.5rem] bg-sand p-6 text-center sm:p-12 lg:p-20">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.34em] text-olive-800/70">Reservas</p>
-          <h2 className="mx-auto max-w-3xl font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-6xl">
+          <h2 className="mx-auto max-w-3xl font-serif text-[2rem] leading-tight tracking-[-0.04em] sm:text-6xl">
             Vení a bajar un cambio en Chapadmalal.
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-charcoal/68">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-charcoal/68 sm:mt-6 sm:text-lg sm:leading-8">
             Elegí tus fechas, prepará algo rico para la parrilla y dejá que la costa haga el resto.
           </p>
-          <div className="mt-10">
+          <div className="mt-8 sm:mt-10">
             <CtaLink>Consultá disponibilidad en Airbnb</CtaLink>
           </div>
         </div>
